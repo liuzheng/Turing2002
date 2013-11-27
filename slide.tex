@@ -1,0 +1,168 @@
+\documentclass[slidestop,compress,mathserif]{beamer}
+\usepackage{fontspec,xunicode,xltxtra,beamerthemesplit}
+
+%以下是各种演示主题，定义幻灯片中的所有细节
+%\usetheme{default}
+%\usetheme{Berlin}%这个主题比较好
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+\usetheme{Berkeley}%这种演示主题比较好
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Marburg}
+%\usetheme{PaloAlto}%这种演示主题比较好
+%\usetheme{Antibes}
+%\usetheme{Darmstadt}
+%\usetheme{JuanLesPins}
+%\usetheme{Montpellier}
+%\usetheme{Singapore}
+%\usetheme{Boadilla}
+%\usetheme{Madrid}
+%\usetheme{AnnArbor}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Warsaw}
+
+%以下是各种外部主题，确定幻灯的显示式样
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+%\useoutertheme[height=0.1\textwidth,width=0.15\textwidth,hideothersubsections]{sidebar}
+%\useoutertheme{smoothbars}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+%\useoutertheme[height=0.5\textwidth]{sidebar}
+
+%以下是各种内部主题
+%\useinnertheme{default}
+%\useinnertheme{circles}
+%\useinnertheme{rectangles}
+\useinnertheme[shadow]{rounded}
+
+%以下是各种颜色主题
+%\usecolortheme{default}
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{sidebartab}
+%\usecolortheme{structure}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%以下是各种字体主题
+%\usefonttheme{default}
+%\usefonttheme[onlymath]{serif}
+%\usefonttheme{structurebold}
+%\usefonttheme{structureitalicserif}
+%\usefonttheme{structuresmallcapsserif}
+
+\setsansfont[Mapping=tex-text, BoldFont={微软雅黑 Bold}]{微软雅黑}
+
+% 中文环境自动换行
+\XeTeXlinebreaklocale "zh"  % 表示用中文的断行
+\XeTeXlinebreakskip = 0pt plus 1pt % 多一点调整的空间
+
+% 中文环境修正导航栏
+\makeatletter
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\def\beamer@linkspace#1{
+  \begin{pgfpicture}{0pt}{-1.5pt}{#1}{5.5pt}
+    \pgfsetfillopacity{0}
+    \pgftext[x=0pt,y=-1.5pt]{.}
+    \pgftext[x=#1,y=5.5pt]{.}
+  \end{pgfpicture}}
+\makeatother
+
+% 超链接高亮显示
+\hypersetup{CJKbookmarks=true,
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+urlcolor=blue,
+bookmarksopen=true,
+breaklinks=true
+}
+
+% 幻灯片切换方式
+%\transblindshorizontal 	% 水平百叶窗
+%\transblindsvertical 		% 垂直百叶窗
+%\transboxin				% 盒状收缩
+%\transboxout				% 盒状展开
+%\transdissolve				% 溶解
+%\transglitter
+%\transsplithorizontalin	% 上下向中央收缩
+%\transsplitverticalin		% 垂直向中央收缩
+%\transsplithorizontalout	% 上下向中央展开
+%\transsplitverticalout		% 垂直向中央展开
+%\transwipe					% 从下抽出
+
+
+\title{2002年图灵奖~\\~公钥密码学~\\~RSA加密算法}
+\author{刘正~~徐小奇}
+\date{\today}
+%\institute{同济大学电信学院}
+
+\logo{\color{blue!50}\scalebox{2}{{\includegraphics[height=0.8cm]{logo.jpg}\vspace{220pt}}}}
+
+% 设定frametitle居中
+\makeatletter 
+\long\def\beamer@@frametitle[#1]#2{% 
+  \beamer@ifempty{#2}{}{% 
+    \gdef\insertframetitle{\centering{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}}% 
+  \gdef\beamer@frametitle{#2}% 
+  \gdef\beamer@shortframetitle{#1}% 
+}% 
+} 
+\makeatother
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{ddd}
+\begin{frame}
+
+\frametitle{我是中文} 
+%\framesubtitle{\centerline{subtext}} 
+\animate<3-6>% 自动逐步显示
+\begin{itemize}[<+->]
+\item one
+\item two
+\item three
+\item four
+\item five
+\item six
+\end{itemize}
+
+刘正 徐小奇 e
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
