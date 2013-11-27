@@ -131,6 +131,36 @@ breaklinks=true
 \frame{\titlepage}
 
 \section{RSA加密算法}
+
+\begin{frame}
+  \frametitle{加密的历史}
+  
+  \begin{block}<+->{1976年以前，所有的加密方法都是同一种模式：}
+    \begin{itemize}[<+->]
+        \item 甲方选择某一种加密规则，对信息进行加密；
+        \item 乙方使用同一种规则，对信息进行解密。
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{加密的历史}
+  
+  \begin{block}{1976年以前，所有的加密方法都是同一种模式：}
+    \begin{itemize}
+        \item 甲方选择某一种加密规则，对信息进行加密；
+        \item 乙方使用同一种规则，对信息进行解密。
+    \end{itemize}
+  \end{block}
+  ~\\[0.6cm]
+
+~ ~ ~ ~由于加密和解密使用同样规则（简称"密钥"），这被称为"对称加密算法"（Symmetric-key algorithm）。
+
+~ ~ ~ ~这种加密模式有一个最大弱点：甲方必须把加密规则告诉乙方，否则无法解密。保存和传递密钥，就成了最头疼的问题。
+\end{frame}
+
+
 \begin{frame}
   \frametitle{RSA加密算法}
 ~ ~ ~ ~ RSA加密算法是一种非对称加密算法。在公开密钥加密和电子商业中RSA被广泛使用。
