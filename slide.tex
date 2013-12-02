@@ -1,5 +1,12 @@
 \documentclass[slidestop,compress,mathserif]{beamer}
 \usepackage{fontspec,xunicode,xltxtra,beamerthemesplit}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{animate}
+
+\graphicspath{{figures/}}
 
 %以下是各种演示主题，定义幻灯片中的所有细节
 %\usetheme{default}
@@ -66,7 +73,8 @@
 %\usefonttheme{structureitalicserif}
 %\usefonttheme{structuresmallcapsserif}
 
-\setsansfont[Mapping=tex-text, BoldFont={Microsoft YaHei}]{Microsoft YaHei}
+\setsansfont[Mapping=tex-text, BoldFont={Microsoft YaHei Bold}]{Microsoft YaHei}
+
 
 % 中文环境自动换行
 \XeTeXlinebreaklocale "zh"  % 表示用中文的断行
@@ -92,6 +100,7 @@ urlcolor=blue,
 bookmarksopen=true,
 breaklinks=true
 }
+
 
 % 幻灯片切换方式
 %\transblindshorizontal 	% 水平百叶窗
@@ -160,6 +169,67 @@ breaklinks=true
 ~ ~ ~ ~这种加密模式有一个最大弱点：甲方必须把加密规则告诉乙方，否则无法解密。保存和传递密钥，就成了最头疼的问题。
 \end{frame}
 
+\subsection{\hfill 凯撒密码}
+\begin{frame}
+  \frametitle{凯撒密码}
+  字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
+  \begin{figure}
+    \centering
+    \includegraphics[width=5cm]{Caesar3.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{凯撒密码}
+  \begin{itemize}[<+->]
+    \item{明文字母表：}ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    \item{密文字母表：}DEFGHIJKLMNOPQRSTUVWXYZABC
+    \item{明文：}THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+    \item{密文：}WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ
+    \end{itemize}
+
+\end{frame}
+\begin{frame}
+  \frametitle{凯撒密码}
+  \begin{itemize}
+    \item{明文字母表：}ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    \item{密文字母表：}DEFGHIJKLMNOPQRSTUVWXYZABC
+    \item{明文：}THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+    \item{密文：}WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ
+    \end{itemize}
+  恺撒密码的加密、解密方法还能够通过同余的数学方法进行计算。首先将字母用数字代替，A=0，B=1，\ldots，Z=25。此时偏移量为n的加密方法即为：
+
+  \begin{equation}
+    E_n=(x+n) ~mod~ 26
+  \end{equation}
+  解密就是：
+  \begin{equation}
+    D_n=(x-n) ~mod~ 26
+  \end{equation}
+
+\end{frame}
+
+
+\subsection{\hfill 栅栏密码}
+\begin{frame}
+  \frametitle{栅栏密码}
+加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
+\end{frame}
+
+\subsection{\hfill 维基尼亚密码}
+
+
+\subsection{\hfill 栅栏密码}
+\begin{frame}
+  \frametitle{栅栏密码}
+加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
+\end{frame}
+
+\subsection{\hfill 维基尼亚密码}
+\begin{frame}
+  \frametitle{维基尼亚密码}
+引入密钥 对抗字频统计既同一个密文字符对应该的明文不一定是相同的）
+\end{frame}
 
 \begin{frame}
   \frametitle{RSA加密算法}
@@ -172,25 +242,65 @@ breaklinks=true
 \end{frame}
 
 \section{获奖者生平}
+
 \begin{frame}
-  \frametitle{Ronald L. Rivest}
+  \frametitle{获奖啦}
 
 \end{frame}
 
-\begin{frame}
-  \frametitle{Adi Shamir}
 
-\end{frame}
-
-\begin{frame}
-  \frametitle{Leonard M. Adleman}
-
-\end{frame}
-
+\subsection{\hfill Cocks}
 \begin{frame}
   \frametitle{Clifford Cocks}
+  \begin{multicols}{2}
+    \begin{figure}
+      \includegraphics[width=3cm]{Cocks.jpg}
+    \end{figure}
+    Clifford Christopher Cocks出生于1950年12月28日，是英国数学家，密码学家，任职于英国国家通讯总部(GCHQ).
+    
+    He invented the widely used encryption algorithm now commonly known as RSA, about three years before it was independently developed by Rivest, Shamir, and Adleman at MIT. He has not been generally recognised for this achievement because his work was classified information, and therefore not released to the public at the time.
+
+    
+  \end{multicols}
+  
+\end{frame}
+
+\subsection{\hfill Rivest}
+\begin{frame}
+  \frametitle{Ronald L. Rivest}
+  \begin{multicols}{2}
+    \begin{figure}
+      \includegraphics[width=3cm]{Rivest.jpg}
+    \end{figure}
+    
+  \end{multicols}
+  
+\end{frame}
+
+\subsection{\hfill Shamir}
+\begin{frame}
+  \frametitle{Adi Shamir}
+  \begin{multicols}{2}
+    \begin{figure}
+      \includegraphics[width=3cm]{Shamir.jpg}
+    \end{figure}
+    
+  \end{multicols}
+  
+\end{frame}
+
+\subsection{\hfill Adleman}
+\begin{frame}
+  \frametitle{Leonard M. Adleman}
+  \begin{multicols}{2}
+    \begin{figure}
+      \includegraphics[width=3cm]{Adleman.jpg}
+    \end{figure}
+    
+  \end{multicols}
 
 \end{frame}
+
 
 
 
