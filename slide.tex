@@ -7,6 +7,7 @@
 \usepackage{animate}
 \usepackage[labelsep=quad]{caption}[2011/11/10]
 \usepackage{float}
+\usepackage{picins}
 
 \renewcommand{\figurename}{}
 
@@ -145,6 +146,7 @@ breaklinks=true
 \section{RSA加密算法}
 
 \begin{frame}
+  \transdissolve
   \frametitle{加密的历史}
   
   \begin{block}<+->{1976年以前，所有的加密方法都是同一种模式：}
@@ -181,6 +183,7 @@ breaklinks=true
   ~~~~字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
 \end{frame}
 \begin{frame}
+\transboxout
   \frametitle{凯撒密码}
   ~~~~字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
   \begin{figure}
@@ -226,6 +229,7 @@ breaklinks=true
   \frametitle{栅栏密码}
 \end{frame}
 \begin{frame}
+  \transwipe
   \frametitle{栅栏密码}
 %加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
   ~\\[1.6cm]
@@ -242,8 +246,9 @@ breaklinks=true
   \frametitle{RSA加密算法}
 \end{frame}
 \begin{frame}
+  \transsplitverticalin
   \frametitle{RSA加密算法}
-~ ~ ~ ~ RSA加密算法是一种非对称加密算法。在公开密钥加密和电子商业中RSA被广泛使用。
+ ~ ~ ~ ~RSA加密算法是一种非对称加密算法。在公开密钥加密和电子商业中RSA被广泛使用。
 
 ~ ~ ~ ~ RSA是1977年由罗纳德·李维斯特（Ron Rivest）、阿迪·萨莫尔（Adi Shamir）和伦纳德·阿德曼（Leonard Adleman）一起提出的。当时他们三人都在麻省理工学院工作。RSA就是他们三人姓氏开头字母拼在一起组成的。
 
@@ -251,14 +256,34 @@ breaklinks=true
 
 \end{frame}
 
+
+\begin{frame}
+  \transboxout
+  \frametitle{RSA加密算法}
+  \begin{center}
+    \begin{figure}
+      \includegraphics[width=6cm]{Publickeysharedsecret.svg.png}
+    \end{figure}
+  \end{center}
+\end{frame}
+
 \section{获奖者生平}
 % http://www.techcn.com.cn/index.php?doc-view-131079.html#1
 
 \begin{frame}
   \frametitle{获奖啦}
+  \parpic(11cm,6cm){\includegraphics[width=9cm]{3peoples}}
 
 \end{frame}
 
+\begin{frame}
+  \transboxout
+  \frametitle{获奖啦}
+  \parpic(11cm,6cm){\includegraphics[width=9cm]{3peoples}}
+  \parpic(11cm,6cm){\includegraphics[width=5cm]{turing}}
+
+
+\end{frame}
 
 \subsection{\hfill Cocks}
 \begin{frame}
@@ -407,8 +432,13 @@ breaklinks=true
 
 \section{八卦环节}
 \begin{frame}
+  \transblindsvertical
   \frametitle{八卦环节}
+ ~~~~当年第一个公开密钥算法是背包算法，其发明者Ralph Merkle对这个算法极有信心，确信这个算法不可能被攻破，所以他悬赏100美元奖金给破解算法的人。Adi Shamir迅速破解了该算法，并领走了奖金。Shamir就是RSA算法的发明人之一。
 
+ ~~~~但Merkle并没有气馁，他又加强了算法，并悬赏1000美元奖金，给破解新算法的人。结果Ronald Rivest也迅速地破解了该算法，并领走了奖金。Rivest是RSA算法的另一个发明人。
+
+ ~~~~于是，Merkle终于没有胆量尝试第三次悬赏，于是RSA的最后一个作者Leonard Adleman也就没有机会成为万元户了。（按照规律，Merkle如果要悬赏，应该是10000美金了。）
 \end{frame}
 
 
