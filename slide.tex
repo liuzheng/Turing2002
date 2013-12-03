@@ -5,6 +5,10 @@
 \usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{animate}
+\usepackage[labelsep=quad]{caption}[2011/11/10]
+\usepackage{float}
+
+\renewcommand{\figurename}{}
 
 \graphicspath{{figures/}}
 
@@ -74,7 +78,6 @@
 %\usefonttheme{structuresmallcapsserif}
 
 \setsansfont[Mapping=tex-text, BoldFont={Microsoft YaHei Bold}]{Microsoft YaHei}
-
 
 % 中文环境自动换行
 \XeTeXlinebreaklocale "zh"  % 表示用中文的断行
@@ -172,12 +175,20 @@ breaklinks=true
 \subsection{\hfill 凯撒密码}
 \begin{frame}
   \frametitle{凯撒密码}
-  字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
+\end{frame}
+\begin{frame}
+  \frametitle{凯撒密码}
+  ~~~~字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
+\end{frame}
+\begin{frame}
+  \frametitle{凯撒密码}
+  ~~~~字母之间的替换---它的几个变种：换字式密码(破解的方法可以使用字符频数分析法)、转置式密码、多表替换密码(先分组后凯撒加密)
   \begin{figure}
     \centering
     \includegraphics[width=5cm]{Caesar3.png}
   \end{figure}
 \end{frame}
+
 
 %\begin{frame}
 %  \frametitle{凯撒密码}
@@ -213,24 +224,23 @@ breaklinks=true
 \subsection{\hfill 栅栏密码}
 \begin{frame}
   \frametitle{栅栏密码}
-加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
 \end{frame}
-
-\subsection{\hfill 维基尼亚密码}
-
-
-\subsection{\hfill 栅栏密码}
 \begin{frame}
   \frametitle{栅栏密码}
-加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
+%加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话
+  ~\\[1.6cm]
+    ~~~~所谓栅栏密码，就是把要加密的明文分成N个一组，然后把每组的第1个字连起来，形成一段无规律的话。 不过栅栏密码本身有一个潜规则，就是组成栅栏的字母一般不会太多。（一般不超过30个，也就是一、两句话）
 \end{frame}
 
-\subsection{\hfill 维基尼亚密码}
+%\subsection{\hfill 维基尼亚密码}
+%\begin{frame}
+%  \frametitle{维基尼亚密码}
+%引入密钥 对抗字频统计既同一个密文字符对应该的明文不一定是相同的）
+%\end{frame}
+\subsection{\hfill RSA加密算法}
 \begin{frame}
-  \frametitle{维基尼亚密码}
-引入密钥 对抗字频统计既同一个密文字符对应该的明文不一定是相同的）
+  \frametitle{RSA加密算法}
 \end{frame}
-
 \begin{frame}
   \frametitle{RSA加密算法}
 ~ ~ ~ ~ RSA加密算法是一种非对称加密算法。在公开密钥加密和电子商业中RSA被广泛使用。
@@ -242,6 +252,7 @@ breaklinks=true
 \end{frame}
 
 \section{获奖者生平}
+% http://www.techcn.com.cn/index.php?doc-view-131079.html#1
 
 \begin{frame}
   \frametitle{获奖啦}
@@ -252,6 +263,7 @@ breaklinks=true
 \subsection{\hfill Cocks}
 \begin{frame}
   \frametitle{Clifford Cocks}
+  
   \begin{multicols}{2}
     \begin{figure}
       \includegraphics[width=3cm]{Cocks.jpg}
@@ -271,6 +283,7 @@ breaklinks=true
   \begin{multicols}{2}
     \begin{figure}
       \includegraphics[width=3cm]{rivest_photo.jpg}
+      \caption{1947, Schenectady, New York, USA}
     \end{figure}
     
   \end{multicols}
@@ -278,17 +291,104 @@ breaklinks=true
 \end{frame}
 
 \subsection{\hfill Shamir}
+
+% EDUCATION
 \begin{frame}
   \frametitle{Adi Shamir}
   \begin{multicols}{2}
-    \begin{figure}
-      \includegraphics[width=3cm]{Shamir.jpg}
-    \end{figure}
+    \begin{minipage}[c]{0.5\textwidth}
+      \begin{figure}[H]
+        \includegraphics[width=3cm]{Shamir.jpg}
+        \caption{July 6, 1952, Tel Aviv, Israel}
+      \end{figure}
+    \end{minipage}
+
+    BSc (Mathematics, Tel Aviv University, 1973); 
+   
+    ~\\ 
     
+    MSc (Computer Science, Weizmann Institute, Israel, 1975); 
+    
+    ~\\
+
+    PhD (Computer Science, Weizmann Institute, Israel, 1977)    
   \end{multicols}
   
 \end{frame}
+% EXPERIENCE
+\begin{frame}
+  \frametitle{Adi Shamir}
+  \begin{multicols}{2}
+    \begin{minipage}[c]{0.5\textwidth}
+      \begin{figure}[H]
+        \includegraphics[width=3cm]{Shamir.jpg}
+        \caption{July 6, 1952, Tel Aviv, Israel}
+      \end{figure}
+    \end{minipage}
 
+     \footnotesize
+    Post doctorate position, Warwick University, England (1976); 
+    
+    Instructor, Department of Mathematics, MIT (1977-1978); 
+    
+    Assistant Professor Department of Mathematics, MIT (1978-1980);
+    
+    Associate Professor at Department of Applied Mathematics, Weizmann Institute of Science, Rehovot, Israel (1980-1984);
+    
+    Professor, Department of Applied Mathematics, The Weizmann Institute of Science, Rehovot, Israel(1984 onward) Invited Professor, École Normale Suprieure, Paris (2006 onward).
+  \end{multicols}
+  
+\end{frame}
+% HONORS & AWARDS
+\begin{frame}
+  \frametitle{Adi Shamir}
+  \begin{multicols}{2}
+    \begin{minipage}[c]{0.5\textwidth}
+      \begin{figure}[H]
+        \includegraphics[width=3cm]{Shamir.jpg}
+        \caption{July 6, 1952, Tel Aviv, Israel}
+      \end{figure}
+    \end{minipage}
+    \footnotesize
+    Israel Prize (2008); 
+    
+    ACM Turing Award (2002 – jointly with R. Rivest and L. Adleman);
+    
+    IEEE Koji Kobayashi Computers and Communications Award (2000); 
+    
+    ACM Paris Kanellakis Theory and Practice Award (1996 – again jointly with others for RSA); 
+    
+    UAP Scientific Prize (1990); 
+    
+    IEEE WRG Baker Award (1986); 
+    
+    Vatican Pontifical Academy PIUS XI Gold Medal (1992); 
+    
+    Israel Mathematical Society Erdos Prize (1983); 
+    
+    Elected to the Israeli Academy of Science (1998); 
+    
+    Fellow, International Association of Cryptographic Research (2004); 
+    
+    Elected to the US National Academy of Sciences (2005); 
+    
+    Honorary Doctorates from École Normale Suprieure (2003) and the University of Waterloo (2009).    
+  \end{multicols}
+  
+\end{frame}
+\begin{frame}
+  \frametitle{Adi Shamir}
+  \begin{multicols}{2}
+    \begin{minipage}[c]{0.5\textwidth}
+      \begin{figure}[H]
+        \includegraphics[width=3cm]{Shamir.jpg}
+        \caption{July 6, 1952, Tel Aviv, Israel}
+      \end{figure}
+    \end{minipage}
+
+  \end{multicols}
+  
+\end{frame}
 \subsection{\hfill Adleman}
 \begin{frame}
   \frametitle{Leonard M. Adleman}
@@ -306,7 +406,10 @@ breaklinks=true
 
 
 \section{八卦环节}
+\begin{frame}
+  \frametitle{八卦环节}
 
+\end{frame}
 
 
 
